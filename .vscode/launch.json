@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\asafe\\OneDrive\\Imagens\\Desenhos Asafe\\Documentos\\trabalho\\para Gabriel\\amostra de site\\www\\amostra_de_site\\index.html"
+            "file": "c:\\Users\\asafe\\OneDrive\\Imagens\\Desenhos Asafe\\Documentos\\trabalho\\para Gabriel\\servidor\\www\\amostra_de_site\\index.html"
         }
     ]
 }

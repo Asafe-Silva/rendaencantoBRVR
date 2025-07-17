@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <!-- V.1 -->
+    <!-- V.2 -->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -55,7 +55,7 @@
 
                     .social-icons-mobile li a {
                         display: inline-block;
-                        margin: 0 12px; /* Espaço entre os ícones */
+                        margin: 0 10px; /* Espaço entre os ícones */
                         font-size: 20px; /* Tamanho dos ícones */
                         color: #fff; /* Cor dos ícones, personalize se quiser */
                         transition: color 0.3s;
@@ -366,31 +366,86 @@
                     <br>onde voce encontra os melhores predios</p>
                 </div>
 
-                <!-- Olha teste em baixo -->
-
+                <!-- CSS para imagens -->
                 <style>
+                    /* Centralize o bloco inteiro, não apenas a imagem */
                     .img-fluid {
-                    display: block;          /* Remove espaços extras abaixo da imagem */
-                    max-width: 50%;         /* Nunca ultrapassa o tamanho do container */
-                    height: auto;            /* Mantém proporção da imagem */
-                    border-radius: 10px;      /* Borda arredondada opcional */
-                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
-                    margin: 0 auto;          /* Centraliza a imagem */
+                        margin: 0 auto;
+                    }
+
+                    /* Sombra (opcional, aplicada separadamente) */
+                    .logo-sombra {
+                        box-shadow: 0 4% 12% rgba(0, 0, 0, 0.2);
+                        border-radius: 2%;
+                    }
+
+                    /* Logo com tamanho ideal — não altera visual original */
+                    .logo-normal {
+                        width: 50%;
+                        height: auto;
+                        object-fit: contain;
+                        display: inline-block;
+                        margin: 0 auto;
+                    }
+
+                    /* Logo muito grande — reduzida */
+                    .logo-grande {
+                        width: 35%;
+                        height: auto;
+                        object-fit: contain;
+                        display: inline-block;
+                        margin: 0 auto;
+                    }
+
+                    /* Logo muito pequena — aumentada */
+                    .logo-pequena {
+                        width: 65%;
+                        height: auto;
+                        min-width: 50%;
+                        object-fit: contain;
+                        display: inline-block;
+                        margin: 0 auto;
+                    }
+
+                    /* Ajuste geral para telas pequenas */
+                    @media (max-width: 768px) {
+                        .logo-normal,
+                        .logo-grande,
+                        .logo-pequena {
+                            width: 80%;
+                            min-width: unset;
+                        }
+                    }
+
+                    @media (max-width: 991px) {
+                        .logo-normal,
+                        .logo-grande,
+                        .logo-pequena {
+                            width: 80%;
+                        }
+                    }
+
+                    @media (max-width: 575px) {
+                        .logo-normal,
+                        .logo-grande,
+                        .logo-pequena {
+                            width: 100%;
+                        }
                     }
                 </style>
 
-                <div class="section-content container">
+                <div class="section-content container" style="width: 100% !important;">
                     <h2 class="text-center mb-5">Opções de Alojamento</h2>
 
                     <!-- Linha 1 -->
-                    <div class="row mb-4">
+                    <div class="row mb-4"> 
                         <div class="col-md-12">
                             <br>
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <a href="https://dajasdourovalley.com/casas/" target="_blank">
-                                <img src="img/dajasdourovalley.jpg" class="img-fluid" alt="Casa no Douro Valley">
+                                <img src="img/dajasdourovalley.jpg" class="img-fluid logo-normal logo-sombra" alt="Casa no Douro Valley">
                             </a>
                             <h4>Casas no Douro Valley</h4>
                             <p>Hospede-se em casas incríveis com paisagens únicas e conforto total.</p>
@@ -399,7 +454,7 @@
 
                         <div class="col-md-6 mb-3">
                             <a href="https://www.casadonaermelinda.com/" target="_blank">
-                                <img src="img/casadonaermelinda.jpg" class="img-fluid" alt="Casa Dona Ermelinda">
+                                <img src="img/casadonaermelinda.jpg" class="img-fluid logo-normal logo-sombra" alt="Casa Dona Ermelinda">
                             </a>
                             <h4>Casa Dona Ermelinda</h4>
                             <p>Casa charmosa com ambiente acolhedor e decoração típica.</p>
@@ -408,52 +463,44 @@
                     </div>
 
                     <!-- Linha 2 -->
-                    <br>
-                    <div class="col-md-6 mb-3">
-                        <a href="https://www.airbnb.pt/a/discover/" target="_blank">
-                            <img src="img/airbnb.jpg" class="img-fluid_2" alt="Airbnb apartamentos">
-                        </a>
-                        <h4>Apartamentos no Airbnb</h4>
-                        <p>Explore apartamentos únicos ao redor do mundo.</p>
-                        <a class="btn btn-primary" href="https://www.airbnb.pt/a/discover/" target="_blank">Explorar</a>
+                    <div class="row mb-4">
+                        <br>
+                        <div class="col-md-6 mb-3">
+                            <a href="https://www.airbnb.pt/a/discover/" target="_blank">
+                                <img src="img/airbnb.jpg" class="img-fluid logo-normal logo-sombra" alt="Airbnb apartamentos">
+                            </a>
+                            <h4>Apartamentos no Airbnb</h4>
+                            <p>Explore apartamentos únicos ao redor do mundo.</p>
+                            <a class="btn btn-primary" href="https://www.airbnb.pt/a/discover/" target="_blank">Explorar</a>
+                        </div>
+
+                        <!-- Idealista Portugal -->
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <a href="https://www.idealista.pt" target="_blank">
+                                <img src="img/idealista.jpg" class="img-fluid logo-normal logo-sombra" alt="Idealista Portugal">
+                            </a>
+                            <h4>Idealista Portugal</h4>
+                            <p>Explore imóveis à venda e para arrendar em todo o país.</p>
+                            <a class="btn btn-primary" href="https://www.idealista.pt" target="_blank">Visitar Site</a>
+                        </div>
                     </div>
+
                     <!-- Linha 3 -->
                     <div class="row mb-4">
-                        <style>
-                            .img-fluid_max {
-                                display: block;          /* Remove espaços extras abaixo da imagem */
-                                max-width: 8000%;         /* Nunca ultrapassa o tamanho do container */
-                                height: auto;            /* Mantém proporção da imagem */
-                                border-radius: 10px;      /* Borda arredondada opcional */
-                                box-shadow: 0 8px 15px rgba(0, 0, 0, 0); /* Sombra leve para destaque */
-                                margin: 0 auto;          /* Centraliza a imagem */
-                            }
-                        </style>
-
                         <div class="col-md-6 mb-3">
+                            <br>
                             <a href="https://www.hometogo.pt/" target="_blank">
-                                <img src="img/home_to_go_2.jpg" class="img-fluid_max" alt="HomeToGo estadias">
+                                <img src="img/home_to_go_2.jpg" class="img-fluid logo-normal logo-sombra" alt="HomeToGo estadias">
                             </a>
                             <h4>HomeToGo</h4>
                             <p>Busque hotéis, pousadas e outras opções de alojamento.</p>
                             <a class="btn btn-primary" href="https://www.hometogo.pt/" target="_blank">Pesquisar</a>
                         </div>
 
-                        <style>
-                            .img-fluid_2 {
-                            display: block;          /* Remove espaços extras abaixo da imagem */
-                            max-width: 35%;         /* Nunca ultrapassa o tamanho do container */
-                            height: auto;            /* Mantém proporção da imagem */
-                            border-radius: 10px;      /* Borda arredondada opcional */
-                            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
-                            margin: 0 auto;          /* Centraliza a imagem */
-                            }
-                        </style>
-
                         <div class="col-md-6 mb-3">
                             <br>
                             <a href="https://www.booking.com/" target="_blank">
-                                <img src="img/Booking.jpg" class="img-fluid_2" alt="Booking hotéis">
+                                <img src="img/Booking.jpg" class="img-fluid logo-normal logo-sombra" alt="Booking hotéis">
                             </a>
                             <h4>Hotéis no Booking</h4>
                             <p>Reserve hotéis em qualquer parte do mundo.</p>
@@ -655,25 +702,19 @@
                                                     A vista era linda, o chão rangia nas madrugadas, e havia um vizinho pianista que tocava sempre que chovia.
                                                     Casamos ali mesmo, entre jantares com amigos e cartas deixadas na geladeira.<br>
                                                     A vida era isso: um suspiro partilhado.<br>
-                                                    Mas o tempo, esse velho escultor, começou a entortar o que era reto.
-                                                    Giacomo passou a fazer “horas extras”.
-                                                    Começou a jantar com os “amigos da academia”.
-                                                    Voltou a usar perfume — um que eu nunca comprei pra ele.<br>
-                                                    No nosso aniversário de 25 anos de casamento…
-                                                    Ele não apareceu.
+                                                    Mas o tempo, esse velho escultor, começou a entortar o que era reto. Giacomo passou a fazer “horas extras”. Começou a jantar com os “amigos da academia”. Voltou a usar perfume — um que eu nunca comprei pra ele.<br>
+                                                    No nosso aniversário de 25 anos de casamento… Ele não apareceu.
                                                     Esperei, com a mesa posta e o vinho que ele mais gostava respirando no decantador.<br>
-                                                    Por curiosidade — ou pressentimento — entrei no site da Renda & Encanto.
-                                                    E lá estava.
+                                                    Por curiosidade ou pressentimento, entrei no site da Renda & Encanto. E lá estava.
                                                     Um comentário de uma mulher.
                                                     Falando do "Senhor Giacomo do quinto andar", italiano, viúvo…
                                                     O mesmo Giacomo que dizia me amar.
                                                     Que agora, aparentemente, tinha tempo para receitas gourmet, clubes de culinária… e jantares na varanda.<br>
                                                     Meu mundo desabou.<br>
-                                                    Na manhã seguinte, fiz as malas.
-                                                    Saí daquele apartamento, mas não da Renda & Encanto.
-                                                    Comprei outro espaço — menor, mais silencioso. Um novo começo.<br><br>
+                                                    Na manhã seguinte, fiz as malas. Saí daquele apartamento, mas não da Renda & Encanto.
+                                                    Comprei outro espaço, menor, mais silencioso. Um novo começo.<br><br>
                                                     Hoje, todas as manhãs, o porteiro me cumprimenta com um sorriso.
-                                                    Na academia do prédio, conheci um homem chamado Bruno.
+                                                    Na academia do prédio, conheci um homem chamado Paplo.
                                                     Ele tem mãos fortes, risada fácil... e uma história tão partida quanto a minha.<br>
                                                     Talvez o amor seja isso:<br>
                                                     Mudar de andar, mas continuar acreditando no edifício.<br>
